@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13554EA7EE228218B8BDDC36 /* Pods_tddObjcDepInjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92E0F1D6E4336364CF5AA43 /* Pods_tddObjcDepInjection.framework */; };
+		C4106B69FCBC173EACDBCE57 /* Pods_tddObjcDepInjectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436AAEC0342E9F6E99337F8A /* Pods_tddObjcDepInjectionTests.framework */; };
 		F4F74E661EBBC5C8003C9981 /* tddObjcDepInjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F74E5C1EBBC5C8003C9981 /* tddObjcDepInjection.framework */; };
 		F4F74E6B1EBBC5C8003C9981 /* tddObjcDepInjectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F74E6A1EBBC5C8003C9981 /* tddObjcDepInjectionTests.m */; };
 		F4F74E6D1EBBC5C8003C9981 /* tddObjcDepInjection.h in Headers */ = {isa = PBXBuildFile; fileRef = F4F74E5F1EBBC5C8003C9981 /* tddObjcDepInjection.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +25,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0333717AA6220FFAA1CFEC88 /* Pods-tddObjcDepInjection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tddObjcDepInjection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tddObjcDepInjection/Pods-tddObjcDepInjection.debug.xcconfig"; sourceTree = "<group>"; };
+		1A84C425ACC5D3F9BC9584F8 /* Pods-tddObjcDepInjectionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tddObjcDepInjectionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tddObjcDepInjectionTests/Pods-tddObjcDepInjectionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3095DCDB2BC7EBEB3D3958A4 /* Pods-tddObjcDepInjectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tddObjcDepInjectionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tddObjcDepInjectionTests/Pods-tddObjcDepInjectionTests.release.xcconfig"; sourceTree = "<group>"; };
+		436AAEC0342E9F6E99337F8A /* Pods_tddObjcDepInjectionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tddObjcDepInjectionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5842AB1F838BE40023B73818 /* Pods-tddObjcDepInjection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tddObjcDepInjection.release.xcconfig"; path = "Pods/Target Support Files/Pods-tddObjcDepInjection/Pods-tddObjcDepInjection.release.xcconfig"; sourceTree = "<group>"; };
+		C92E0F1D6E4336364CF5AA43 /* Pods_tddObjcDepInjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tddObjcDepInjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F74E5C1EBBC5C8003C9981 /* tddObjcDepInjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = tddObjcDepInjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F74E5F1EBBC5C8003C9981 /* tddObjcDepInjection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tddObjcDepInjection.h; sourceTree = "<group>"; };
 		F4F74E601EBBC5C8003C9981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13554EA7EE228218B8BDDC36 /* Pods_tddObjcDepInjection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +53,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4F74E661EBBC5C8003C9981 /* tddObjcDepInjection.framework in Frameworks */,
+				C4106B69FCBC173EACDBCE57 /* Pods_tddObjcDepInjectionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8A2803A813A0313CBD16893 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C92E0F1D6E4336364CF5AA43 /* Pods_tddObjcDepInjection.framework */,
+				436AAEC0342E9F6E99337F8A /* Pods_tddObjcDepInjectionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF7BD51D874B2A4F8876DFFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0333717AA6220FFAA1CFEC88 /* Pods-tddObjcDepInjection.debug.xcconfig */,
+				5842AB1F838BE40023B73818 /* Pods-tddObjcDepInjection.release.xcconfig */,
+				1A84C425ACC5D3F9BC9584F8 /* Pods-tddObjcDepInjectionTests.debug.xcconfig */,
+				3095DCDB2BC7EBEB3D3958A4 /* Pods-tddObjcDepInjectionTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F4F74E521EBBC5C8003C9981 = {
 			isa = PBXGroup;
 			children = (
 				F4F74E5E1EBBC5C8003C9981 /* tddObjcDepInjection */,
 				F4F74E691EBBC5C8003C9981 /* tddObjcDepInjectionTests */,
 				F4F74E5D1EBBC5C8003C9981 /* Products */,
+				EF7BD51D874B2A4F8876DFFF /* Pods */,
+				E8A2803A813A0313CBD16893 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,10 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4F74E701EBBC5C8003C9981 /* Build configuration list for PBXNativeTarget "tddObjcDepInjection" */;
 			buildPhases = (
+				6B46AF658E1E199E4EDB2009 /* [CP] Check Pods Manifest.lock */,
 				F4F74E571EBBC5C8003C9981 /* Sources */,
 				F4F74E581EBBC5C8003C9981 /* Frameworks */,
 				F4F74E591EBBC5C8003C9981 /* Headers */,
 				F4F74E5A1EBBC5C8003C9981 /* Resources */,
+				86EA5F1F367CC329BB0F3F81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4F74E731EBBC5C8003C9981 /* Build configuration list for PBXNativeTarget "tddObjcDepInjectionTests" */;
 			buildPhases = (
+				0467284CF2007110B4BF8F91 /* [CP] Check Pods Manifest.lock */,
 				F4F74E611EBBC5C8003C9981 /* Sources */,
 				F4F74E621EBBC5C8003C9981 /* Frameworks */,
 				F4F74E631EBBC5C8003C9981 /* Resources */,
+				4D7453B691A10FDFF38297F7 /* [CP] Embed Pods Frameworks */,
+				5771C415CE34D7B066904C64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +228,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0467284CF2007110B4BF8F91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4D7453B691A10FDFF38297F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tddObjcDepInjectionTests/Pods-tddObjcDepInjectionTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5771C415CE34D7B066904C64 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tddObjcDepInjectionTests/Pods-tddObjcDepInjectionTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B46AF658E1E199E4EDB2009 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		86EA5F1F367CC329BB0F3F81 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tddObjcDepInjection/Pods-tddObjcDepInjection-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4F74E571EBBC5C8003C9981 /* Sources */ = {
@@ -317,6 +432,7 @@
 		};
 		F4F74E711EBBC5C8003C9981 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0333717AA6220FFAA1CFEC88 /* Pods-tddObjcDepInjection.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -335,6 +451,7 @@
 		};
 		F4F74E721EBBC5C8003C9981 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5842AB1F838BE40023B73818 /* Pods-tddObjcDepInjection.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -353,6 +470,7 @@
 		};
 		F4F74E741EBBC5C8003C9981 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A84C425ACC5D3F9BC9584F8 /* Pods-tddObjcDepInjectionTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 5B283G7QPP;
 				INFOPLIST_FILE = tddObjcDepInjectionTests/Info.plist;
@@ -364,6 +482,7 @@
 		};
 		F4F74E751EBBC5C8003C9981 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3095DCDB2BC7EBEB3D3958A4 /* Pods-tddObjcDepInjectionTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 5B283G7QPP;
 				INFOPLIST_FILE = tddObjcDepInjectionTests/Info.plist;
