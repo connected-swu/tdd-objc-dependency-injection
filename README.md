@@ -10,9 +10,9 @@ These are points you should keep in mind as you work through the examples.
 
 - [Setting Up](#setting-up)
 - [A Few Notes](#a-few-notes)
-- [Example 1:  `DataHandler`](#datahandler)
-- [Example 2:  `FeatureXCoachMarkPolicy`](#featurexcoachmarkpolicy)
-- [Example 3:  `DataService`](#dataservice)
+- [Example 1:  `DataHandler`](#example-1-datahandler)
+- [Example 2:  `FeatureXCoachMarkPolicy`](#example-2-featurexcoachmarkpolicy)
+- [Example 3:  `DataService`](#example-3-dataservice)
 - [About This TDD Series](#about-this-tdd-series)
 
 ## Setting Up
@@ -35,14 +35,57 @@ and voila!  You're good to go!
 - When working through the examples, you can exclude a test by attaching a `x` in front of a `describe`, `context`, or `it`.
 - To focus on running specific tests, attach a `f` in front.
 
-## `DataHandler`
+## Example #1: `DataHandler`
+
+`DataHandler` provides a simple data handler method that returns an error if the supplied data is `nil`. 
+
+1. Open `DataHandlerSpec` and remove `x` from the first set of tests.
+2. Hit `⌘`+`U` to run the tests.  Notice that the 2nd assertion fails.
+3. Take a look at the code, is there anything wrong?
+4. Switch the order of two `it`'s and run tests again.  Notice that tests not pass.
+
+wait...**What's going on?**
+
+- Why did this happen?
+- What's the code smell?
+- What do these tests tell us about our code design?  (stateful + mutable) vs. (functional + immutable)
 
 
-## `FeatureXCoachMarkPolicy`
+- Try running the other tests in the spec, what do you notice?
+
+## Example #2: `FeatureXCoachMarkPolicy`
+
+You've probably seen a feature coachmark before.  It's usually an overlay or dummy UI that serves to help users discover features in the app.  `FeatureXCoachMarkPolicy` is a policy object that determines when the coachmark should show up.
+
+1. Reset your iPhone simulator
+2. Open `FeatureXCoachMarkPolicySpec` and remove `x` from the first set of tests.
+3. Run the tests.  Notice that all tests pass.
+4. Run the tests again.  Notice that the first test fails.
+5. Play around a bit, try repeating the steps, and try running tests multiple times.
+
+...**huh?**
+
+- Why did this happen?
+- Is the code incorrect?  If not, what's the issue?
+- What would happen if this project was connectd to CI?
+- What tends to happen to tests that behave this way?
 
 
-## `DataService`
+- Imagine an opposite case such as a "rate app" feature where instead hide-upon-interaction, the behaviour is to show-upon-interaction.
+	- How would CI be affected?
+	- How confident would you be in the tests?
 
+
+## Example #3: `DataService`
+
+`DataService` is part of a common app architecture where a service aggregates either network or cached data for multiple API's and returns it for consumption by the presentation layer.
+
+1. Remove the `x` from all tests in this file.
+2. Run the tests.  Notice that they all pass.
+3. Compare the 3 sets of tests,
+	- How do the `beforeEach` sections differ?
+	- Which one do you find easiest to understand?
+4. Try directly returning `NO` for the method `lastUpdateLessThan5DaysAgo`, which tests fail?  What does this say about the first set of tests?
 
 ## About This TDD Series
 

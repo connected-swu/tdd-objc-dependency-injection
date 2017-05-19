@@ -21,7 +21,7 @@ xdescribe(@"DataService", ^{
         subjectAction(^{
             [subject locationInfo];
         });
-        context(@"when last data cache date more than 5 days ago", ^{
+        context(@"when last data cache date is more than 5 days ago", ^{
             beforeEach(^{
                 spy_on(subject);
                 subject stub_method(@selector(lastUpdateLessThan5DaysAgo))
