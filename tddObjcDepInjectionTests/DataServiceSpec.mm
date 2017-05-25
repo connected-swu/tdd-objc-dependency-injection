@@ -77,6 +77,7 @@ xdescribe(@"BetterDataService", ^{
                 spy_on(NSDate.class);
                 NSDate.class stub_method(@selector(date))
                 .and_return(SwuMockDate(2017, 5, 18, 0, 0, 0));
+                
                 testUserDefaults stub_method(@selector(objectForKey:))
                 .with(@"data_cache_date_key")
                 .and_return(SwuMockDate(2017, 5, 12, 23, 59, 59));
@@ -90,6 +91,7 @@ xdescribe(@"BetterDataService", ^{
                 spy_on(NSDate.class);
                 NSDate.class stub_method(@selector(date))
                 .and_return(SwuMockDate(2017, 5, 18, 0, 0, 0));
+                
                 testUserDefaults stub_method(@selector(objectForKey:))
                 .with(@"data_cache_date_key")
                 .and_return(SwuMockDate(2017, 5, 13, 0, 0, 0));
@@ -103,6 +105,7 @@ xdescribe(@"BetterDataService", ^{
                 spy_on(NSDate.class);
                 NSDate.class stub_method(@selector(date))
                 .and_return(SwuMockDate(2017, 5, 18, 0, 0, 0));
+                
                 testUserDefaults stub_method(@selector(objectForKey:))
                 .with(@"data_cache_date_key")
                 .and_return(SwuMockDate(2017, 5, 13, 0, 0, 1));

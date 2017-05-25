@@ -7,6 +7,7 @@
 //
 
 #import "FeatureXCoachMarkPolicy.h"
+#import <Blindside/Blindside.h>
 
 static NSString *kLastDateOfInteractionKey = @"feature_x_key";
 
@@ -18,17 +19,25 @@ static NSString *kLastDateOfInteractionKey = @"feature_x_key";
     return self.lastDateOfInteraction == nil;
 }
 - (void)setLastDateOfInteraction:(NSDate *)lastDateOfInteraction {
-    [[NSUserDefaults standardUserDefaults] setValue:lastDateOfInteraction forKey:kLastDateOfInteractionKey];
+    [self.myDefaults setValue:lastDateOfInteraction forKey:kLastDateOfInteractionKey];
 }
 - (NSDate *)lastDateOfInteraction {
-    return [[NSUserDefaults standardUserDefaults] valueForKey:kLastDateOfInteractionKey];
+    return [self.myDefaults valueForKey:kLastDateOfInteractionKey];
 }
+- (NSUserDefaults *)myDefaults {
+    return [NSUserDefaults standardUserDefaults];
+}
+
 @end
 
 
 #pragma mark - Property Injection
 
 @implementation PropertyInjectedFeatureXCoachMarkPolicy
++ (BSPropertySet *)bsProperties {
+    return [BSPropertySet propertySetWithClass:self.class
+                                 propertyNames:NSStringFromSelector(@selector(userDefaults)), nil];
+}
 - (BOOL)shouldShow {
     return self.lastDateOfInteraction == nil;
 }
@@ -48,7 +57,11 @@ static NSString *kLastDateOfInteractionKey = @"feature_x_key";
 @end
 
 @implementation ConstructorInjectedFeatureXCoachMarkPolicy
-
++ (BSInitializer *)bsInitializer {
+    return [BSInitializer initializerWithClass:self.class
+                                      selector:@selector(initWithUserDefaults:)
+                                  argumentKeys:NSUserDefaults.class, nil];
+}
 - (instancetype)initWithUserDefaults:(NSUserDefaults *)userDefaults {
     self = [super init];
     if (self) {
@@ -56,7 +69,6 @@ static NSString *kLastDateOfInteractionKey = @"feature_x_key";
     }
     return self;
 }
-
 - (BOOL)shouldShow {
     return self.lastDateOfInteraction == nil;
 }

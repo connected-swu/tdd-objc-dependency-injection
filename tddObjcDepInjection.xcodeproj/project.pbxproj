@@ -10,8 +10,9 @@
 		13554EA7EE228218B8BDDC36 /* Pods_tddObjcDepInjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92E0F1D6E4336364CF5AA43 /* Pods_tddObjcDepInjection.framework */; };
 		C4106B69FCBC173EACDBCE57 /* Pods_tddObjcDepInjectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436AAEC0342E9F6E99337F8A /* Pods_tddObjcDepInjectionTests.framework */; };
 		F410DFB01ECF28BB007D16A0 /* NSDate+SwuMocking.m in Sources */ = {isa = PBXBuildFile; fileRef = F410DFAF1ECF28BB007D16A0 /* NSDate+SwuMocking.m */; };
-		F410DFB31ECF6046007D16A0 /* MyViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F410DFB11ECF6046007D16A0 /* MyViewController.h */; };
-		F410DFB41ECF6046007D16A0 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F410DFB21ECF6046007D16A0 /* MyViewController.m */; };
+		F410DFB71ED744CE007D16A0 /* MyModule.h in Headers */ = {isa = PBXBuildFile; fileRef = F410DFB51ED744CE007D16A0 /* MyModule.h */; };
+		F410DFB81ED744CE007D16A0 /* MyModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F410DFB61ED744CE007D16A0 /* MyModule.m */; };
+		F410DFBB1ED74F33007D16A0 /* MySpecModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F410DFBA1ED74F33007D16A0 /* MySpecModule.m */; };
 		F4F74E661EBBC5C8003C9981 /* tddObjcDepInjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F74E5C1EBBC5C8003C9981 /* tddObjcDepInjection.framework */; };
 		F4F74E6D1EBBC5C8003C9981 /* tddObjcDepInjection.h in Headers */ = {isa = PBXBuildFile; fileRef = F4F74E5F1EBBC5C8003C9981 /* tddObjcDepInjection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4F74EB91EC544E0003C9981 /* FeatreXCoachMarkPolicySpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = F4F74EB81EC544E0003C9981 /* FeatreXCoachMarkPolicySpec.mm */; };
@@ -44,8 +45,10 @@
 		C92E0F1D6E4336364CF5AA43 /* Pods_tddObjcDepInjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tddObjcDepInjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F410DFAE1ECF28BB007D16A0 /* NSDate+SwuMocking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SwuMocking.h"; sourceTree = "<group>"; };
 		F410DFAF1ECF28BB007D16A0 /* NSDate+SwuMocking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SwuMocking.m"; sourceTree = "<group>"; };
-		F410DFB11ECF6046007D16A0 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		F410DFB21ECF6046007D16A0 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		F410DFB51ED744CE007D16A0 /* MyModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyModule.h; sourceTree = "<group>"; };
+		F410DFB61ED744CE007D16A0 /* MyModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyModule.m; sourceTree = "<group>"; };
+		F410DFB91ED74F33007D16A0 /* MySpecModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySpecModule.h; sourceTree = "<group>"; };
+		F410DFBA1ED74F33007D16A0 /* MySpecModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySpecModule.m; sourceTree = "<group>"; };
 		F4F74E5C1EBBC5C8003C9981 /* tddObjcDepInjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = tddObjcDepInjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F74E5F1EBBC5C8003C9981 /* tddObjcDepInjection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tddObjcDepInjection.h; sourceTree = "<group>"; };
 		F4F74E601EBBC5C8003C9981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 		F410DFAD1ECF28BB007D16A0 /* infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				F410DFB91ED74F33007D16A0 /* MySpecModule.h */,
+				F410DFBA1ED74F33007D16A0 /* MySpecModule.m */,
 				F410DFAE1ECF28BB007D16A0 /* NSDate+SwuMocking.h */,
 				F410DFAF1ECF28BB007D16A0 /* NSDate+SwuMocking.m */,
 			);
@@ -142,8 +147,8 @@
 				F4F74EBA1EC544F6003C9981 /* FeatureXCoachMarkPolicy.h */,
 				F4F74EBB1EC544F6003C9981 /* FeatureXCoachMarkPolicy.m */,
 				F4F74E601EBBC5C8003C9981 /* Info.plist */,
-				F410DFB11ECF6046007D16A0 /* MyViewController.h */,
-				F410DFB21ECF6046007D16A0 /* MyViewController.m */,
+				F410DFB51ED744CE007D16A0 /* MyModule.h */,
+				F410DFB61ED744CE007D16A0 /* MyModule.m */,
 				F4F74E5F1EBBC5C8003C9981 /* tddObjcDepInjection.h */,
 			);
 			path = tddObjcDepInjection;
@@ -168,11 +173,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F410DFB71ED744CE007D16A0 /* MyModule.h in Headers */,
 				F4F74EBC1EC544F6003C9981 /* FeatureXCoachMarkPolicy.h in Headers */,
 				F4F74ECE1EC800C6003C9981 /* DataHandler.h in Headers */,
 				F4F74ED41EC80932003C9981 /* DataService.h in Headers */,
 				F4F74E6D1EBBC5C8003C9981 /* tddObjcDepInjection.h in Headers */,
-				F410DFB31ECF6046007D16A0 /* MyViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,8 +366,8 @@
 			files = (
 				F4F74ED51EC80932003C9981 /* DataService.m in Sources */,
 				F4F74ECF1EC800C6003C9981 /* DataHandler.m in Sources */,
-				F410DFB41ECF6046007D16A0 /* MyViewController.m in Sources */,
 				F4F74EBD1EC544F6003C9981 /* FeatureXCoachMarkPolicy.m in Sources */,
+				F410DFB81ED744CE007D16A0 /* MyModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +377,7 @@
 			files = (
 				F4F74EB91EC544E0003C9981 /* FeatreXCoachMarkPolicySpec.mm in Sources */,
 				F4F74ECB1EC800BD003C9981 /* DataHandlerSpec.mm in Sources */,
+				F410DFBB1ED74F33007D16A0 /* MySpecModule.m in Sources */,
 				F4F74ED11EC8091E003C9981 /* DataServiceSpec.mm in Sources */,
 				F410DFB01ECF28BB007D16A0 /* NSDate+SwuMocking.m in Sources */,
 			);

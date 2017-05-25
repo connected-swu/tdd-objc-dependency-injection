@@ -8,18 +8,19 @@ using namespace Cedar::Doubles;
 SPEC_BEGIN(DataHandlerSpec)
 
 xdescribe(@"DataHandler", ^{
-    __block DataHandler *dataHandler;
+    __block DataHandler *subject;
     __block NSError *outcomeError;
     beforeEach(^{
-        dataHandler = [DataHandler new];
+        // outcomeError = nil;
+        subject = [DataHandler new];
     });
     
     it(@"should produce an error if nil data supplied", ^{
-        [dataHandler handleData:nil error:&outcomeError];
+        [subject handleData:nil error:&outcomeError];
         outcomeError.domain should equal(@"com.tdd.codingkata");
     });
     it(@"should not produce an error if non-nill data supplied", ^{
-        [dataHandler handleData:@{} error:&outcomeError];
+        [subject handleData:@{} error:&outcomeError];
         outcomeError.domain should be_nil;
     });
 });
@@ -36,16 +37,16 @@ xdescribe(@"experiment", ^{
 });
 
 xdescribe(@"BetterDataHandler", ^{
-    __block DataHandler *dataHandler;
+    __block DataHandler *subject;
     beforeEach(^{
-        dataHandler = [DataHandler new];
+        subject = [DataHandler new];
     });
     
     it(@"should produce an error if nil data supplied", ^{
-        [dataHandler betterHandleData:nil].domain should equal(@"com.tdd.codingkata");
+        [subject betterHandleData:nil].domain should equal(@"com.tdd.codingkata");
     });
     it(@"should not produce an error if non-nill data supplied", ^{
-        [dataHandler betterHandleData:@{}].domain should be_nil;
+        [subject betterHandleData:@{}].domain should be_nil;
     });
 });
 

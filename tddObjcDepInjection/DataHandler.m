@@ -14,6 +14,9 @@
     if (!data) {
         *error = [self nilDataError];
     }
+    /* else {
+        *error = nil;
+    }*/
 }
 
 - (NSError *)betterHandleData:(NSDictionary *)data {

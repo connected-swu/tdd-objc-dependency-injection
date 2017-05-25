@@ -24,6 +24,6 @@
 @interface ConstructorInjectedFeatureXCoachMarkPolicy : NSObject
 @property (nonatomic, readonly) BOOL shouldShow;
 @property (nonatomic) NSDate *lastDateOfInteraction;
-- (instancetype)initWithUserDefaults:(NSUserDefaults *)userDefaults;
+- (instancetype)initWithUserDefaults:(NSUserDefaults *)userDefaults NS_DESIGNATED_INITIALIZER;
 @end
 
