@@ -35,6 +35,8 @@ and voila!  You're good to go!
 - When working through the examples, you can exclude a test by attaching a `x` in front of a `describe`, `context`, or `it`.
 - To focus on running specific tests, attach a `f` in front.
 
+When working through these examples, be sure to try changing things here and there to compare various outcomes.  This will help you develop an intuition for test contamination, how it happens, and what it reveals about the code.
+
 ## Some Examples
 
 ### Example #1: `DataHandler`
